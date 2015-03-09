@@ -14,3 +14,7 @@
 mkmf.log
 .ruby-version
 .ruby-gemset
+
+*.wav
+presentation*
+samples
