@@ -5,7 +5,7 @@ module MusicTheory
   class Scale
     include MusicTheory::Output
     include MusicTheory::ScaleSteps
-    attr_accessor :starting_note, :number_of_octaves, :direction, :output_file_name, :all_notes, :scale_type, :scale_notes, :distort, :duration, :frequency
+    attr_accessor :starting_note, :output_file_name, :all_notes, :scale_type, :scale_notes, :distort, :duration, :frequency
 
     def initialize(scale_type  = :major, options = {})
       @scale_type       = scale_type

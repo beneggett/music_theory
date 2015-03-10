@@ -6,10 +6,10 @@ module MusicTheory
     attr_accessor :starting_note, :amount, :direction, :output_file_name, :all_notes
 
     def initialize(options = {})
-      @starting_note    = options[:starting_note] || MusicTheory::Note.new      # Note to start on
-      @amount= options[:amount] || 2                      # Number of octaves to repeat
-      @direction        = options[:direction] ||  'asc'                         # Number of seconds per note
-      @output_file_name = options[:output_file_name] || 'octave' # File name to write (without extension)
+      @starting_note    = options[:starting_note] || MusicTheory::Note.new  # Note to start on
+      @amount           = options[:amount] || 2                             # Number of octaves to repeat
+      @direction        = options[:direction] ||  'asc'                     # Number of seconds per note
+      @output_file_name = options[:output_file_name] || 'octave'            # File name to write (without extension)
       build_octave
     end
 

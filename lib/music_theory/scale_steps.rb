@@ -36,8 +36,7 @@ module MusicTheory
     private
 
     def set_scale_step(jump)
-      new_chord_scale =  MusicTheory::Scale.new scale_type, distort: distort, frequency: scale_notes[jump].frequency, duration: duration
-      new_chord_scale
+      MusicTheory::Scale.new scale_type, distort: distort, frequency: scale_notes[jump].frequency, duration: duration
     end
 
   end
