@@ -6,7 +6,8 @@ module MusicTheory
     attr_accessor :frequency,  :duration, :output_file_name, :distort
 
     def initialize(options = {})
-      @frequency        = options[:frequency].to_f || 220.0          # Note frequency in Hz
+      @frequency        = options[:frequency] || 440.0          # Note frequency in Hz
+      @frequency = @frequency.to_f
       @duration         = options[:duration] ||  1.0            # Number of seconds per note
       @distort          = options[:distort] || false
       @output_file_name = options[:output_file_name] || 'note'  # File name to write (without extension)
@@ -41,7 +42,7 @@ module MusicTheory
 
     def distort!(samples)
       samples.map do |sample|
-        negative = (sample) < 0
+        negative = sample < 0
         sample *= 8.to_f
         if sample.abs > 5
           sample = 5
@@ -51,9 +52,6 @@ module MusicTheory
       end
     end
 
-    def scale
-
-    end
   end
 
 end

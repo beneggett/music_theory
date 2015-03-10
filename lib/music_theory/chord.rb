@@ -22,12 +22,14 @@ module MusicTheory
            new_samples[i] +=  value
          end
        end
+       normalize_samples(new_samples)
+    end
 
+    def normalize_samples(new_samples)
        max = new_samples.map {|s| s.abs }.max
        multiplier = 1.0 / max
        new_samples.map!{ |s| multiplier * s }
-    end
-
+     end
 
     def samples
       flatten_third
