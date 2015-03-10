@@ -1,8 +1,10 @@
 require 'music_theory/output'
+require 'music_theory/scale_steps'
 
 module MusicTheory
   class Scale
     include MusicTheory::Output
+    include MusicTheory::ScaleSteps
     attr_accessor :starting_note, :number_of_octaves, :direction, :output_file_name, :all_notes, :scale_type, :scale_notes, :distort, :duration, :frequency
 
     def initialize(scale_type  = :major, options = {})
@@ -56,6 +58,7 @@ module MusicTheory
     def chord
       third.chord
     end
+
   end
 
 end
