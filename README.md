@@ -1,6 +1,8 @@
 # MusicTheory
 
-TODO: Write a gem description
+Learn Music through Ruby!
+
+Based on my presentation at MtnWest Ruby Conference. Slides/link to come.
 
 ## Installation
 
@@ -20,7 +22,56 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+Play any of the sample songs by running them with ruby
+
+```
+ruby samples/arpeggios.rb
+```
+
+
+``` ruby
+require 'music_theory'
+```
+Make new notes
+
+```
+MusicTheory::Note.new
+```
+
+Play Notes
+
+```
+MusicTheory::Note.new.play
+```
+
+Create scales
+
+```
+MusicTheory::Scale.new
+```
+
+Play Scales
+
+```
+MusicTheory::Scale.new.play
+```
+
+Play chords
+```
+MusicTheory::Scale.new.chord.play
+```
+
+Play third
+```
+MusicTheory::Scale.new.third.play
+```
+
+Play arpeggios
+```
+MusicTheory::Scale.new.arpeggio.play
+```
+
+
 
 ## Contributing
 
@@ -29,3 +80,9 @@ TODO: Write usage instructions here
 3. Commit your changes (`git commit -am 'Add some feature'`)
 4. Push to the branch (`git push origin my-new-feature`)
 5. Create a new Pull Request
+
+
+## Thanks
+
+1. URUG community
+2. Alex Speller (for indirect inspiration)
