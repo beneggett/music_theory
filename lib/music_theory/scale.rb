@@ -55,6 +55,10 @@ module MusicTheory
       third ||= MusicTheory::Third.new self
     end
 
+    def arpeggio
+      arpeggio ||= third.arpeggio
+    end
+
     def chord
       third.chord
     end

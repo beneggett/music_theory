@@ -26,9 +26,14 @@ module MusicTheory
       chord ||= MusicTheory::Chord.new self
     end
 
+    def arpeggio
+      arpeggio ||= MusicTheory::Arpeggio.new self
+    end
+
     def output_file_name
       scale.output_file_name || 'thirds'
     end
+
 
   end
 end
