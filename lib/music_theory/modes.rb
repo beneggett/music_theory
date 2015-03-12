@@ -1,14 +1,14 @@
 module MusicTheory
   class Modes
-    S = 1
-    T = 2
-    I = [T, T, S, T, T, T, S]
-    II = I.rotate
-    III = I.rotate(2)
-    IV = I.rotate(3)
-    V = I.rotate(4)
-    VI = I.rotate(5)
-    VII = I.rotate(6)
+    S         = 1
+    T         = 2
+    I         = [T, T, S, T, T, T, S]
+    II        = I.rotate
+    III       = I.rotate(2)
+    IV        = I.rotate(3)
+    V         = I.rotate(4)
+    VI        = I.rotate(5)
+    VII       = I.rotate(6)
     CHROMATIC = [S,S,S,S,S,S,S,S,S,S,S,S]
 
     # Map the music theory names as class methods

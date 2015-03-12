@@ -6,16 +6,15 @@ module MusicTheory
     attr_accessor :scale, :all_notes
 
     def initialize(scale)
-      @scale = scale
-      @all_notes  = [scale.scale_notes.first]
-      current = 0
+      @scale             = scale
+      @all_notes         = [scale.scale_notes.first]
+      current            = 0
       double_scale_notes = scale.scale_notes * 2
       scale.mode.in_groups_of(2, false) do |group|
         current += group.sum
         all_notes << double_scale_notes[current]
       end
-      all_notes.uniq! {|note| note.frequency}
-      all_notes.sort_by! {|note| note.frequency}
+      all_notes.uniq! {|note| note.frequency}.sort_by! {|note| note.frequency}
     end
 
     def samples
@@ -23,11 +22,11 @@ module MusicTheory
     end
 
     def chord
-      chord ||= MusicTheory::Chord.new self
+      chord ||= MusicTheory::Chord.new self.dup
     end
 
     def arpeggio
-      arpeggio ||= MusicTheory::Arpeggio.new self
+      arpeggio ||= MusicTheory::Arpeggio.new self.dup
     end
 
     def output_file_name

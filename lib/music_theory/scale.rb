@@ -52,7 +52,7 @@ module MusicTheory
     end
 
     def third
-      third ||= MusicTheory::Third.new self
+      third ||= MusicTheory::Third.new self.dup
     end
 
     def arpeggio
@@ -60,7 +60,7 @@ module MusicTheory
     end
 
     def chord
-      third.chord
+      chord ||= third.chord
     end
 
   end

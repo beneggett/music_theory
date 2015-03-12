@@ -7,7 +7,7 @@ module MusicTheory
 
     def initialize(options = {})
       @frequency        = options[:frequency] || 440.0          # Note frequency in Hz
-      @frequency = @frequency.to_f
+      @frequency        = @frequency.to_f
       @duration         = options[:duration] ||  1.0            # Number of seconds per note
       @distort          = options[:distort] || false
       @output_file_name = options[:output_file_name] || 'note'  # File name to write (without extension)

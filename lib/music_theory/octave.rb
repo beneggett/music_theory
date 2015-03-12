@@ -16,7 +16,7 @@ module MusicTheory
     def build_octave
       @all_notes = [ starting_note ]
       amount.to_i.times do
-        new_note = all_notes.last.clone
+        new_note = all_notes.last.dup
         if direction == 'asc'
           new_note.frequency = all_notes.last.frequency * 2
         elsif direction == 'desc'

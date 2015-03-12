@@ -7,8 +7,8 @@ module MusicTheory
     attr_accessor :third, :duration, :all_notes, :output_file_name
 
     def initialize(third, options = {})
-      @duration = options[:duration] || 2.0
-      @third = third
+      @duration         = options[:duration] || 2.0
+      @third            = third
       @output_file_name = options[:output_file_name] || 'chord' # File name to write (without extension)
     end
 
