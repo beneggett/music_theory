@@ -1,5 +1,4 @@
 require 'wavefile'
-require 'active_support/all'
 
 require "music_theory/version"
 require "music_theory/note"
