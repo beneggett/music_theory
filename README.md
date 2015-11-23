@@ -2,7 +2,11 @@
 
 Learn Music through Ruby!
 
-Based on my presentation at MtnWest Ruby Conference. Slides/link to come.
+Based on my presentation at MtnWest Ruby Conference.
+
+[Slides on SpeakerDeck](https://speakerdeck.com/beneggett/writing-music-with-ruby)
+
+[Recording on Confreaks.tv](http://confreaks.tv/videos/mwrc2015-writing-music-with-ruby-a-subtle-introduction-to-music-theory)
 
 ## Installation
 
