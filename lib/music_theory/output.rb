@@ -21,7 +21,7 @@ module MusicTheory
     end
 
     def play
-      output_track unless File.file?("#{output_file_name || 'music'}.wav")
+      output_track #unless File.file?("#{output_file_name || 'music'}.wav")
       `mplayer #{output_file_name}.wav &> /dev/null`
       nil
     end
