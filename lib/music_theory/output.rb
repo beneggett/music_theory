@@ -22,7 +22,7 @@ module MusicTheory
 
     def play
       output_track unless File.file?("#{output_file_name || 'music'}.wav")
-      `afplay #{output_file_name}.wav`
+      `mplayer #{output_file_name}.wav`
       nil
     end
 
