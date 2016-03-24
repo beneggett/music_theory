@@ -14,7 +14,7 @@ module MusicTheory
         current += group.sum
         all_notes << double_scale_notes[current]
       end
-      all_notes.uniq! {|note| note.frequency}.sort_by! {|note| note.frequency}
+      all_notes.compact.uniq {|note| note.frequency}.sort_by! {|note| note.frequency}
     end
 
     def samples
