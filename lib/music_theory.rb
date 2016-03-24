@@ -1,4 +1,6 @@
-require 'wavefile'
+require "wavefile"
+require "active_support/core_ext/array/grouping"
+require "active_support/core_ext/enumerable"
 
 require "music_theory/version"
 require "music_theory/note"
