@@ -23,6 +23,12 @@ And then execute:
 Or install it yourself as:
 
     $ gem install music_theory
+    
+Make sure that you have mplayer installed as well, as output requires it:
+
+```
+brew install mplayer
+```
 
 ## Usage
 
